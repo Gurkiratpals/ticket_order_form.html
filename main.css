@@ -1,40 +1,38 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 
-body  {	
+body {
 	background-image: url("../images/berry.jpg");
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 100%;
+	line-height: 1.6;
+	color: #333;
 }
 
 div#frame {
 	margin: 25px auto;
-	padding: 20px 30px 20px 20px;
-	width: 50%;
+	padding: 25px 40px;
+	width: 60%;
 	min-width: 900px;
-	background-color: #ffffff;	
+	background-color: #ffffff;
 	background-image: linear-gradient(#ffffff 20%, #fdf7e8 70%, #ffffff 100%);
 	border: 2px solid #009926;
-	border-radius: 8px;
-	box-shadow: 0px 0px 90px 2px #008020;
+	border-radius: 10px;
+	box-shadow: 0px 0px 60px 5px #008020;
 }
 
-p {
-	margin: 20px 0px;
-}
-
+/* Links */
 a {
-	color: #008020; 
+	color: #008020;
+	text-decoration: none;
 }
 
-a:link, a:visited { 
-	text-decoration: none; 
-}
-
-a:hover, a:focus { 
-    text-decoration: underline; 
+a:hover,
+a:focus {
+	text-decoration: underline;
 }
 
 /* Header */
@@ -42,14 +40,14 @@ header {
 	height: 160px;
 	border-bottom: 2px solid #e8b417;
 }
-	
-header img { 
-	float: left; 
-} 
+
+header img {
+	float: left;
+}
 
 header div#header-line-1 {
 	font-size: 300%;
-	font-weight: bold;	
+	font-weight: bold;
 	text-align: right;
 	color: #ecc03b;
 	text-shadow: 2px 2px 2px black;
@@ -63,11 +61,11 @@ header div#header-line-2 {
 	color: #008020;
 }
 
-/* aside */
+/* Sidebar */
 aside {
 	width: 230px;
 	float: left;
-	margin: 30px 10px 0px 0px;
+	margin: 30px 10px 0 0;
 }
 
 aside div.sidebar-title {
@@ -77,19 +75,19 @@ aside div.sidebar-title {
 }
 
 aside ul {
-	margin: 15px 0px 0px 15px;
+	margin: 15px 0 0 15px;
 }
 
 aside ul li {
-	margin: 15px 0px 0px 0px;
+	margin-top: 15px;
 }
 
-aside ul li a{
+aside ul li a {
 	font-style: italic;
 	font-size: 90%;
 }
 
-/* Main */
+/* Main Content */
 main {
 	margin: 20px 0;
 	padding-left: 20px;
@@ -99,38 +97,31 @@ main {
 	border-left: 2px solid #e8b417;
 }
 
-main h1 { 
+main h1 {
 	margin: 0;
 	font-size: 200%;
 }
 
-main h1:first-letter { 
+main h1:first-letter {
 	font-size: 240%;
 }
 
 main h2 {
-	margin: 25px 0px;
+	margin: 25px 0;
 	font-size: 125%;
 }
 
-main h3 {	
+main h3 {
 	font-size: 110%;
 }
 
+/* Product Categories */
 main ul#product-categories {
 	list-style-type: none;
 }
 
 main ul#product-categories li {
-	margin: 35px 0px;
-}
-
-main ul#product-categories h3 {
-	margin-top: 10px;
-}
-
-main ul#product-categories p{
-	margin-top: 5px;
+	margin: 35px 0;
 }
 
 main ul#product-categories img {
@@ -139,7 +130,7 @@ main ul#product-categories img {
 	box-shadow: 0px 0px 6px 2px #ecc03b;
 }
 
-/* the styles for the navigation menu */
+/* Navigation */
 #nav_menu {
 	margin-top: 2px;
 }
@@ -154,21 +145,18 @@ main ul#product-categories img {
 }
 
 #nav_menu ul li a {
-    background-image: linear-gradient(#fdf7e8 15%, #ffffff 55%, #fdf7e8 100%);
+	background-image: linear-gradient(#fdf7e8 15%, #ffffff 55%, #fdf7e8 100%);
 	width: 180px;
 	padding: 1em 0;
 	display: block;
-    text-align: center;    
-    text-decoration: none;  
+	text-align: center;
 	font-weight: bold;
 }
 
-#nav_menu ul li a:hover, #nav_menu ul li a:focus {
+#nav_menu ul li a:hover,
+#nav_menu ul li a:focus,
+#nav_menu a.current {
 	color: #d1a215;
-}
-
-#nav_menu a.current, #nav_menu a.current:hover, #nav_menu a.current:focus {
-	color: #d1a215;	
 	font-weight: bold;
 }
 
@@ -181,4 +169,114 @@ footer {
 footer p {
 	font-size: 80%;
 	text-align: center;
+	padding: 10px;
+}
+
+/* Form Styling */
+fieldset {
+	margin-bottom: 20px;
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	background-color: #fdfdfd;
+}
+
+legend {
+	font-weight: bold;
+	color: #444;
+	font-size: 95%;
+	margin-bottom: 10px;
+}
+
+label {
+	display: inline-block;
+	width: 180px;
+	text-align: right;
+	font-size: 90%;
+	margin-bottom: 8px;
+	vertical-align: top;
+}
+
+input,
+select {
+	width: 16em;
+	margin-left: 10px;
+	margin-bottom: 12px;
+	font-size: 90%;
+	padding: 6px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	transition: border 0.3s ease;
+}
+
+input:focus,
+select:focus {
+	border-color: #009926;
+	outline: none;
+}
+
+#payment_method label {
+	display: inline;
+	margin-left: 5px;
+}
+
+input[type="radio"] {
+	width: auto;
+	margin-left: 15px;
+}
+
+#exp_month {
+	width: 7em;
+}
+
+#exp_year {
+	width: 6em;
+}
+
+input[type="submit"],
+input[type="reset"] {
+	width: 10em;
+	margin: 15px 10px;
+	display: inline-block;
+	padding: 8px;
+	background-color: #008020;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+	background-color: #005f14;
+}
+
+input:required {
+	border: 2px solid orange;
+}
+
+input:valid {
+	border: 1px solid black;
+}
+
+/* Responsive */
+@media screen and (max-width: 1000px) {
+	div#frame {
+		width: 90%;
+		min-width: 0;
+	}
+
+	label,
+	input,
+	select {
+		width: 100%;
+		text-align: left;
+		margin-left: 0;
+	}
+
+	label {
+		margin-bottom: 5px;
+	}
 }
